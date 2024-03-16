@@ -27,3 +27,6 @@ class DatabaseManager:
 
     def create_tables(self, models):
         self.db.create_tables(models)
+
+    def drop_tables(self, models):
+        self.db.drop_tables(models)

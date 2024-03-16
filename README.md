@@ -6,32 +6,34 @@ This project is a comprehensive solution for managing a phonebook database. It u
 ## Getting Started 
 ### Prerequisites Ensure you have Python installed on your system. This project requires Python 3.6 or newer. 
 ### Installation 
-1. Clone the repository to your local machine: 
+1. Clone the repository to your local machine:
 
+```
 git clone [https://github.com/yourusername/phonebook-project.git](https://github.com/AminSaboohi/PhoneBookWithPostgreAndORM_1.git)
+```
 
-￼Copy code
+
 
 2. Navigate to the project directory: 
 
-cd phonebook-project
+```
+cd PhoneBookWithPostgreAndORM_1
+```
 
-￼Copy code
+3. Install the required libraries:
 
-3. Install the required libraries: 
-
+```
 pip install -r requirements.txt
-
-￼Copy code
+```
 
 ### Setting Up the Database 
 1. Create a PostgreSQL database for the project.
 2. Rename sample_setting.py to local_setting.py.
 3. Follow the instructions in sample_setting.py to configure your database connection settings in local_setting.py. ### Running the Application To start the application, run: 
 
+```
 python main.py
-
-￼Copy code
+```
 
 This will launch the GUI, where you can start entering and viewing phonebook entries. 
 ## Contributing

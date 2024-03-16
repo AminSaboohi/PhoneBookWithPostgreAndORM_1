@@ -7,7 +7,8 @@ This project is a comprehensive solution for managing a phonebook database. It u
 - GUI: Features a user-friendly graphical interface built with Tkinter for data input and interaction.
 - Data Display: Offers a command-line data presentation, displaying the phonebook entries in a table format when the user opts to view the data. 
 ## Getting Started 
-### Prerequisites Ensure you have Python installed on your system. This project requires Python 3.6 or newer. 
+### Prerequisites 
+- Ensure you have Python installed on your system. This project requires Python 3.6 or newer. 
 ### Installation 
 1. Clone the repository to your local machine:
 

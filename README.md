@@ -4,7 +4,7 @@ This project is a comprehensive solution for managing a phonebook database. It u
 ### Installation 
 1. Clone the repository to your local machine: 
 
-git clone https://github.com/yourusername/phonebook-project.git
+git clone [https://github.com/yourusername/phonebook-project.git](https://github.com/AminSaboohi/PhoneBookWithPostgreAndORM_1.git)
 
 ￼Copy code
 

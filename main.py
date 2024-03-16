@@ -3,6 +3,8 @@ from database_manager import DatabaseManager
 import peewee
 import logging
 import local_settings
+import os
+import json
 
 database_manager = DatabaseManager(
     database_name=local_settings.DATABASE['name'],
@@ -81,6 +83,41 @@ class PhoneBook(peewee.Model):
         database = database_manager.db
 
 
+class CityProvinceQuery:
+    def __init__(self, base_path):
+        self.provinces = list()
+        cities_file_path = os.path.join(base_path, 'ir.json')
+
+        with open(cities_file_path, 'r', encoding='utf-8') as cities_file:
+            self.cities = json.load(cities_file)
+
+    def get_all_cities(self):
+        return self.cities
+
+    def get_all_provinces(self):
+        self.provinces = list()
+        for city in self.cities:
+            if city["admin_name"] not in self.provinces:
+                self.provinces.append(city["admin_name"])
+        return self.provinces
+
+
+def read_all_provinces_and_add_to_db(path: str = "./city and province json/"):
+    city_province = CityProvinceQuery(path)
+    provinces = city_province.get_all_provinces()
+    for province in provinces:
+        Province.create(province_name=province)
+
+
+def read_all_cities_and_add_to_db(path: str = "./city_and province json/"):
+    city_province = CityProvinceQuery(path)
+    cities = city_province.get_all_cities()
+    for city in cities:
+        province = Province.select().where(
+            Province.province_name == city["admin_name"]).first()
+        City.create(city_name=city["city"], province=province)
+
+
 def main():
     try:
         database_manager.drop_tables(models=[PhoneBook])
@@ -90,6 +127,9 @@ def main():
                                                Person,
                                                City,
                                                Province])
+
+        read_all_provinces_and_add_to_db("./city and province json/")
+        read_all_cities_and_add_to_db("./city and province json/")
 
     except Exception as error:
         print("Error", error)

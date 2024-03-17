@@ -44,7 +44,6 @@ python main.py
 This will launch the GUI, where you can start entering and viewing phonebook entries. 
 ## Contributing
 Contributions are welcome! Please feel free to submit pull requests or open issues to propose changes or report bugs. 
-## License
-This project is licensed under the MIT License - see the LICENSE file for details. 
+
 
 

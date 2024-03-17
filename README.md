@@ -24,7 +24,14 @@ git clone https://github.com/AminSaboohi/PhoneBookWithPostgreAndORM_1.git
 cd PhoneBookWithPostgreAndORM_1
 ```
 
-3. Install the required libraries:
+3. Make a virtual machine and actvate that: 
+
+```
+py -m venv venv
+venv\Scripts\activate
+```
+
+4. Install the required libraries:
 
 ```
 pip install -r requirements.txt

@@ -13,7 +13,7 @@ This project is a comprehensive solution for managing a phonebook database. It u
 1. Clone the repository to your local machine:
 
 ```
-git clone [https://github.com/yourusername/phonebook-project.git](https://github.com/AminSaboohi/PhoneBookWithPostgreAndORM_1.git)
+git clone (https://github.com/AminSaboohi/PhoneBookWithPostgreAndORM_1.git)
 ```
 
 
